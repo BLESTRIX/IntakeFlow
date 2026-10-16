@@ -1,0 +1,2218 @@
+{
+  "mode": "SIMULATED \u2014 NOT LIVE MODEL ACCURACY",
+  "provider": "demo",
+  "model": "offline-rules-v1",
+  "prompt_version": "intake-v1",
+  "schema_version": "extraction-v1",
+  "dataset_version": "maintenance-v1",
+  "timestamp": "2026-10-16T06:59:42.488910+00:00",
+  "count": 40,
+  "metrics": {
+    "schema_validation_success": 1.0,
+    "category_accuracy": 0.9,
+    "scalar_field_precision": 1.0,
+    "scalar_field_recall": 0.9059,
+    "symptom_precision_lexical": 1.0,
+    "symptom_recall_lexical": 1.0,
+    "field_precision_lexical": 1.0,
+    "field_recall_lexical": 0.936,
+    "multiple_issue_flag_accuracy": 1.0,
+    "attention_flag_accuracy": 0.975,
+    "unsupported_scalar_field_rate": 0.0,
+    "evidence_reference_validity": 1.0,
+    "missing_information_precision": 0.5,
+    "missing_information_recall": 1.0,
+    "follow_up_relevance": null,
+    "semantic_correctness": null,
+    "median_latency_ms": 0.07,
+    "estimated_cost_usd": null
+  },
+  "results": [
+    {
+      "id": "case-001",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "kitchen",
+        "affected_item": "sink",
+        "symptoms": [
+          "The kitchen sink leaks since yesterday."
+        ],
+        "reported_onset": "since yesterday",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The kitchen sink leaks since yesterday.",
+        "missing_information": [
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-001-m1",
+            "quote": "sink"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-001-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-001-m1",
+            "quote": "sink"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-001-m1",
+            "quote": "The kitchen sink leaks since yesterday."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-001-m1",
+            "quote": "since yesterday"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-001-m1",
+            "quote": "The kitchen sink leaks since yesterday."
+          }
+        ]
+      },
+      "latency_ms": 0.33,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-002",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "bathroom",
+        "affected_item": "toilet",
+        "symptoms": [
+          "The bathroom toilet keeps running this morning."
+        ],
+        "reported_onset": "this morning",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The bathroom toilet keeps running this morning.",
+        "missing_information": [
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-002-m1",
+            "quote": "toilet"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-002-m1",
+            "quote": "bathroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-002-m1",
+            "quote": "toilet"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-002-m1",
+            "quote": "The bathroom toilet keeps running this morning."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-002-m1",
+            "quote": "this morning"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-002-m1",
+            "quote": "The bathroom toilet keeps running this morning."
+          }
+        ]
+      },
+      "latency_ms": 0.12,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-003",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "kitchen",
+        "affected_item": "tap",
+        "symptoms": [
+          "The kitchen tap drips all night."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The kitchen tap drips all night.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-003-m1",
+            "quote": "tap"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-003-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-003-m1",
+            "quote": "tap"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-003-m1",
+            "quote": "The kitchen tap drips all night."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-003-m1",
+            "quote": "The kitchen tap drips all night."
+          }
+        ]
+      },
+      "latency_ms": 0.1,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-004",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "bathroom",
+        "affected_item": "drain",
+        "symptoms": [
+          "The bathroom drain is blocked today."
+        ],
+        "reported_onset": "today",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The bathroom drain is blocked today.",
+        "missing_information": [
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-004-m1",
+            "quote": "drain"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-004-m1",
+            "quote": "bathroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-004-m1",
+            "quote": "drain"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-004-m1",
+            "quote": "The bathroom drain is blocked today."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-004-m1",
+            "quote": "today"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-004-m1",
+            "quote": "The bathroom drain is blocked today."
+          }
+        ]
+      },
+      "latency_ms": 0.08,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-005",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "laundry room",
+        "affected_item": "pipe",
+        "symptoms": [
+          "The pipe in the laundry room is leaking."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The pipe in the laundry room is leaking.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-005-m1",
+            "quote": "pipe"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-005-m1",
+            "quote": "laundry room"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-005-m1",
+            "quote": "pipe"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-005-m1",
+            "quote": "The pipe in the laundry room is leaking."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-005-m1",
+            "quote": "The pipe in the laundry room is leaking."
+          }
+        ]
+      },
+      "latency_ms": 0.08,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-006",
+      "output": {
+        "category": "HVAC",
+        "room_or_area": "bedroom",
+        "affected_item": "radiator",
+        "symptoms": [
+          "The bedroom radiator is cold since Monday."
+        ],
+        "reported_onset": "since Monday",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The bedroom radiator is cold since Monday.",
+        "missing_information": [
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-006-m1",
+            "quote": "radiator"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-006-m1",
+            "quote": "bedroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-006-m1",
+            "quote": "radiator"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-006-m1",
+            "quote": "The bedroom radiator is cold since Monday."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-006-m1",
+            "quote": "since Monday"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-006-m1",
+            "quote": "The bedroom radiator is cold since Monday."
+          }
+        ]
+      },
+      "latency_ms": 0.08,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-007",
+      "output": {
+        "category": "HVAC",
+        "room_or_area": "living room",
+        "affected_item": "thermostat",
+        "symptoms": [
+          "The living room thermostat display is blank."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The living room thermostat display is blank.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-007-m1",
+            "quote": "thermostat"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-007-m1",
+            "quote": "living room"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-007-m1",
+            "quote": "thermostat"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-007-m1",
+            "quote": "The living room thermostat display is blank."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-007-m1",
+            "quote": "The living room thermostat display is blank."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-008",
+      "output": {
+        "category": "HVAC",
+        "room_or_area": "bedroom",
+        "affected_item": "air conditioner",
+        "symptoms": [
+          "The bedroom air conditioner blows warm air today."
+        ],
+        "reported_onset": "today",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The bedroom air conditioner blows warm air today.",
+        "missing_information": [
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-008-m1",
+            "quote": "air conditioner"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-008-m1",
+            "quote": "bedroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-008-m1",
+            "quote": "air conditioner"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-008-m1",
+            "quote": "The bedroom air conditioner blows warm air today."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-008-m1",
+            "quote": "today"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-008-m1",
+            "quote": "The bedroom air conditioner blows warm air today."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-009",
+      "output": {
+        "category": "ELECTRICAL",
+        "room_or_area": "kitchen",
+        "affected_item": "outlet",
+        "symptoms": [
+          "The kitchen outlet is loose."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The kitchen outlet is loose.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-009-m1",
+            "quote": "outlet"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-009-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-009-m1",
+            "quote": "outlet"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-009-m1",
+            "quote": "The kitchen outlet is loose."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-009-m1",
+            "quote": "The kitchen outlet is loose."
+          }
+        ]
+      },
+      "latency_ms": 0.05,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-010",
+      "output": {
+        "category": "ELECTRICAL",
+        "room_or_area": "hallway",
+        "affected_item": "light",
+        "symptoms": [
+          "The hallway light flickers this morning."
+        ],
+        "reported_onset": "this morning",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The hallway light flickers this morning.",
+        "missing_information": [
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-010-m1",
+            "quote": "light"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-010-m1",
+            "quote": "hallway"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-010-m1",
+            "quote": "light"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-010-m1",
+            "quote": "The hallway light flickers this morning."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-010-m1",
+            "quote": "this morning"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-010-m1",
+            "quote": "The hallway light flickers this morning."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-011",
+      "output": {
+        "category": "ELECTRICAL",
+        "room_or_area": "bedroom",
+        "affected_item": "socket",
+        "symptoms": [
+          "The bedroom socket sparks when used."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": true,
+        "attention_reason": "Review possible multiple issues, conflicting reports or attention signals in the source.",
+        "summary": "The bedroom socket sparks when used.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-011-m1",
+            "quote": "socket"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-011-m1",
+            "quote": "bedroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-011-m1",
+            "quote": "socket"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-011-m1",
+            "quote": "The bedroom socket sparks when used."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-011-m1",
+            "quote": "The bedroom socket sparks when used."
+          }
+        ]
+      },
+      "latency_ms": 0.05,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-012",
+      "output": {
+        "category": "ELECTRICAL",
+        "room_or_area": "hallway",
+        "affected_item": "breaker",
+        "symptoms": [
+          "The breaker in the hallway trips since yesterday."
+        ],
+        "reported_onset": "since yesterday",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The breaker in the hallway trips since yesterday.",
+        "missing_information": [
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-012-m1",
+            "quote": "breaker"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-012-m1",
+            "quote": "hallway"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-012-m1",
+            "quote": "breaker"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-012-m1",
+            "quote": "The breaker in the hallway trips since yesterday."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-012-m1",
+            "quote": "since yesterday"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-012-m1",
+            "quote": "The breaker in the hallway trips since yesterday."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-013",
+      "output": {
+        "category": "APPLIANCE",
+        "room_or_area": "kitchen",
+        "affected_item": "oven",
+        "symptoms": [
+          "The kitchen oven does not heat."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The kitchen oven does not heat.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-013-m1",
+            "quote": "oven"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-013-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-013-m1",
+            "quote": "oven"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-013-m1",
+            "quote": "The kitchen oven does not heat."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-013-m1",
+            "quote": "The kitchen oven does not heat."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-014",
+      "output": {
+        "category": "APPLIANCE",
+        "room_or_area": "kitchen",
+        "affected_item": "fridge",
+        "symptoms": [
+          "The fridge in the kitchen is warm today."
+        ],
+        "reported_onset": "today",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The fridge in the kitchen is warm today.",
+        "missing_information": [
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-014-m1",
+            "quote": "fridge"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-014-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-014-m1",
+            "quote": "fridge"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-014-m1",
+            "quote": "The fridge in the kitchen is warm today."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-014-m1",
+            "quote": "today"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-014-m1",
+            "quote": "The fridge in the kitchen is warm today."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-015",
+      "output": {
+        "category": "APPLIANCE",
+        "room_or_area": "laundry room",
+        "affected_item": "washer",
+        "symptoms": [
+          "The washer in the laundry room will not spin."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The washer in the laundry room will not spin.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-015-m1",
+            "quote": "washer"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-015-m1",
+            "quote": "laundry room"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-015-m1",
+            "quote": "washer"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-015-m1",
+            "quote": "The washer in the laundry room will not spin."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-015-m1",
+            "quote": "The washer in the laundry room will not spin."
+          }
+        ]
+      },
+      "latency_ms": 0.08,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-016",
+      "output": {
+        "category": "APPLIANCE",
+        "room_or_area": "kitchen",
+        "affected_item": "dishwasher",
+        "symptoms": [
+          "The dishwasher in the kitchen stops mid-cycle."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The dishwasher in the kitchen stops mid-cycle.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-016-m1",
+            "quote": "dishwasher"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-016-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-016-m1",
+            "quote": "dishwasher"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-016-m1",
+            "quote": "The dishwasher in the kitchen stops mid-cycle."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-016-m1",
+            "quote": "The dishwasher in the kitchen stops mid-cycle."
+          }
+        ]
+      },
+      "latency_ms": 0.08,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-017",
+      "output": {
+        "category": "UNKNOWN",
+        "room_or_area": "balcony",
+        "affected_item": null,
+        "symptoms": [
+          "The balcony door handle is broken."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The balcony door handle is broken.",
+        "missing_information": [
+          "category",
+          "affected_item",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which item is affected, and what is happening?"
+        ],
+        "evidence": [
+          {
+            "field": "room_or_area",
+            "message_id": "case-017-m1",
+            "quote": "balcony"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-017-m1",
+            "quote": "The balcony door handle is broken."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-017-m1",
+            "quote": "The balcony door handle is broken."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-018",
+      "output": {
+        "category": "UNKNOWN",
+        "room_or_area": "bedroom",
+        "affected_item": null,
+        "symptoms": [
+          "The bedroom window does not close."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The bedroom window does not close.",
+        "missing_information": [
+          "category",
+          "affected_item",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which item is affected, and what is happening?"
+        ],
+        "evidence": [
+          {
+            "field": "room_or_area",
+            "message_id": "case-018-m1",
+            "quote": "bedroom"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-018-m1",
+            "quote": "The bedroom window does not close."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-018-m1",
+            "quote": "The bedroom window does not close."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-019",
+      "output": {
+        "category": "UNKNOWN",
+        "room_or_area": "hallway",
+        "affected_item": null,
+        "symptoms": [
+          "The hallway ceiling paint is peeling."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The hallway ceiling paint is peeling.",
+        "missing_information": [
+          "category",
+          "affected_item",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which item is affected, and what is happening?"
+        ],
+        "evidence": [
+          {
+            "field": "room_or_area",
+            "message_id": "case-019-m1",
+            "quote": "hallway"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-019-m1",
+            "quote": "The hallway ceiling paint is peeling."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-019-m1",
+            "quote": "The hallway ceiling paint is peeling."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-020",
+      "output": {
+        "category": "UNKNOWN",
+        "room_or_area": "kitchen",
+        "affected_item": null,
+        "symptoms": [
+          "The kitchen cupboard hinge fell off."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The kitchen cupboard hinge fell off.",
+        "missing_information": [
+          "category",
+          "affected_item",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which item is affected, and what is happening?"
+        ],
+        "evidence": [
+          {
+            "field": "room_or_area",
+            "message_id": "case-020-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-020-m1",
+            "quote": "The kitchen cupboard hinge fell off."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-020-m1",
+            "quote": "The kitchen cupboard hinge fell off."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-021",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": null,
+        "affected_item": "sink",
+        "symptoms": [
+          "The sink keeps dripping."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The sink keeps dripping.",
+        "missing_information": [
+          "room_or_area",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which room or area is affected?"
+        ],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-021-m1",
+            "quote": "sink"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-021-m1",
+            "quote": "sink"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-021-m1",
+            "quote": "The sink keeps dripping."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-021-m1",
+            "quote": "The sink keeps dripping."
+          }
+        ]
+      },
+      "latency_ms": 0.04,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-022",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": null,
+        "affected_item": "toilet",
+        "symptoms": [
+          "The toilet is blocked since yesterday."
+        ],
+        "reported_onset": "since yesterday",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The toilet is blocked since yesterday.",
+        "missing_information": [
+          "room_or_area",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which room or area is affected?"
+        ],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-022-m1",
+            "quote": "toilet"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-022-m1",
+            "quote": "toilet"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-022-m1",
+            "quote": "The toilet is blocked since yesterday."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-022-m1",
+            "quote": "since yesterday"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-022-m1",
+            "quote": "The toilet is blocked since yesterday."
+          }
+        ]
+      },
+      "latency_ms": 0.05,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-023",
+      "output": {
+        "category": "ELECTRICAL",
+        "room_or_area": null,
+        "affected_item": "outlet",
+        "symptoms": [
+          "An outlet buzzes when used."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "An outlet buzzes when used.",
+        "missing_information": [
+          "room_or_area",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which room or area is affected?"
+        ],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-023-m1",
+            "quote": "outlet"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-023-m1",
+            "quote": "outlet"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-023-m1",
+            "quote": "An outlet buzzes when used."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-023-m1",
+            "quote": "An outlet buzzes when used."
+          }
+        ]
+      },
+      "latency_ms": 0.05,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-024",
+      "output": {
+        "category": "HVAC",
+        "room_or_area": null,
+        "affected_item": "air conditioner",
+        "symptoms": [
+          "The air conditioner makes a grinding noise."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The air conditioner makes a grinding noise.",
+        "missing_information": [
+          "room_or_area",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which room or area is affected?"
+        ],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-024-m1",
+            "quote": "air conditioner"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-024-m1",
+            "quote": "air conditioner"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-024-m1",
+            "quote": "The air conditioner makes a grinding noise."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-024-m1",
+            "quote": "The air conditioner makes a grinding noise."
+          }
+        ]
+      },
+      "latency_ms": 0.06,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-025",
+      "output": {
+        "category": "APPLIANCE",
+        "room_or_area": null,
+        "affected_item": "washer",
+        "symptoms": [
+          "The washer stopped last week."
+        ],
+        "reported_onset": "last week",
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The washer stopped last week.",
+        "missing_information": [
+          "room_or_area",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which room or area is affected?"
+        ],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-025-m1",
+            "quote": "washer"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-025-m1",
+            "quote": "washer"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-025-m1",
+            "quote": "The washer stopped last week."
+          },
+          {
+            "field": "reported_onset",
+            "message_id": "case-025-m1",
+            "quote": "last week"
+          },
+          {
+            "field": "summary",
+            "message_id": "case-025-m1",
+            "quote": "The washer stopped last week."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-026",
+      "output": {
+        "category": "UNKNOWN",
+        "room_or_area": "bedroom",
+        "affected_item": null,
+        "symptoms": [
+          "Something in the bedroom is making a noise."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "Something in the bedroom is making a noise.",
+        "missing_information": [
+          "category",
+          "affected_item",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which item is affected, and what is happening?"
+        ],
+        "evidence": [
+          {
+            "field": "room_or_area",
+            "message_id": "case-026-m1",
+            "quote": "bedroom"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-026-m1",
+            "quote": "Something in the bedroom is making a noise."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-026-m1",
+            "quote": "Something in the bedroom is making a noise."
+          }
+        ]
+      },
+      "latency_ms": 0.08,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-027",
+      "output": {
+        "category": "UNKNOWN",
+        "room_or_area": "kitchen",
+        "affected_item": null,
+        "symptoms": [
+          "There is a problem in the kitchen."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "There is a problem in the kitchen.",
+        "missing_information": [
+          "category",
+          "affected_item",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which item is affected, and what is happening?"
+        ],
+        "evidence": [
+          {
+            "field": "room_or_area",
+            "message_id": "case-027-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-027-m1",
+            "quote": "There is a problem in the kitchen."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-027-m1",
+            "quote": "There is a problem in the kitchen."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-028",
+      "output": {
+        "category": "UNKNOWN",
+        "room_or_area": null,
+        "affected_item": null,
+        "symptoms": [
+          "Please come and inspect something."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "Please come and inspect something.",
+        "missing_information": [
+          "category",
+          "room_or_area",
+          "affected_item",
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [
+          "Which room or area is affected?",
+          "Which item is affected, and what is happening?"
+        ],
+        "evidence": [
+          {
+            "field": "symptoms",
+            "message_id": "case-028-m1",
+            "quote": "Please come and inspect something."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-028-m1",
+            "quote": "Please come and inspect something."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-029",
+      "output": {
+        "category": "HVAC",
+        "room_or_area": "living room",
+        "affected_item": "heating",
+        "symptoms": [
+          "The heating in the living room stopped. I cannot use the room."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The heating in the living room stopped. I cannot use the room.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-029-m1",
+            "quote": "heating"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-029-m1",
+            "quote": "living room"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-029-m1",
+            "quote": "heating"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-029-m1",
+            "quote": "The heating in the living room stopped. I cannot use the room."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-029-m1",
+            "quote": "The heating in the living room stopped. I cannot use the room."
+          }
+        ]
+      },
+      "latency_ms": 0.08,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-030",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "kitchen",
+        "affected_item": "sink",
+        "symptoms": [
+          "The kitchen sink leaks. The cupboard underneath is wet."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The kitchen sink leaks. The cupboard underneath is wet.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-030-m1",
+            "quote": "sink"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-030-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-030-m1",
+            "quote": "sink"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-030-m1",
+            "quote": "The kitchen sink leaks. The cupboard underneath is wet."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-030-m1",
+            "quote": "The kitchen sink leaks. The cupboard underneath is wet."
+          }
+        ]
+      },
+      "latency_ms": 0.05,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-031",
+      "output": {
+        "category": "APPLIANCE",
+        "room_or_area": "kitchen",
+        "affected_item": "fridge",
+        "symptoms": [
+          "The fridge in the kitchen is warm. Food has spoiled."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The fridge in the kitchen is warm. Food has spoiled.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-031-m1",
+            "quote": "fridge"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-031-m1",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-031-m1",
+            "quote": "fridge"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-031-m1",
+            "quote": "The fridge in the kitchen is warm. Food has spoiled."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-031-m1",
+            "quote": "The fridge in the kitchen is warm. Food has spoiled."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-032",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "bathroom",
+        "affected_item": "drain",
+        "symptoms": [
+          "The bathroom drain overflowed. Water covers the floor."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The bathroom drain overflowed. Water covers the floor.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-032-m1",
+            "quote": "drain"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-032-m1",
+            "quote": "bathroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-032-m1",
+            "quote": "drain"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-032-m1",
+            "quote": "The bathroom drain overflowed. Water covers the floor."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-032-m1",
+            "quote": "The bathroom drain overflowed. Water covers the floor."
+          }
+        ]
+      },
+      "latency_ms": 0.06,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-033",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "kitchen",
+        "affected_item": "sink",
+        "symptoms": [
+          "The sink leaks."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The sink leaks.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-033-m1",
+            "quote": "sink"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-033-m3",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-033-m1",
+            "quote": "sink"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-033-m1",
+            "quote": "The sink leaks."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-033-m1",
+            "quote": "The sink leaks."
+          }
+        ]
+      },
+      "latency_ms": 0.04,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-034",
+      "output": {
+        "category": "ELECTRICAL",
+        "room_or_area": "bedroom",
+        "affected_item": "socket",
+        "symptoms": [
+          "The socket buzzes."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The socket buzzes.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-034-m1",
+            "quote": "socket"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-034-m3",
+            "quote": "bedroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-034-m1",
+            "quote": "socket"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-034-m1",
+            "quote": "The socket buzzes."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-034-m1",
+            "quote": "The socket buzzes."
+          }
+        ]
+      },
+      "latency_ms": 0.05,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-035",
+      "output": {
+        "category": "APPLIANCE",
+        "room_or_area": "kitchen",
+        "affected_item": "oven",
+        "symptoms": [
+          "The oven is cold."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The oven is cold.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-035-m1",
+            "quote": "oven"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-035-m3",
+            "quote": "kitchen"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-035-m1",
+            "quote": "oven"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-035-m1",
+            "quote": "The oven is cold."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-035-m1",
+            "quote": "The oven is cold."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-036",
+      "output": {
+        "category": "HVAC",
+        "room_or_area": "living room",
+        "affected_item": "radiator",
+        "symptoms": [
+          "The radiator is cold."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The radiator is cold.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-036-m1",
+            "quote": "radiator"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-036-m3",
+            "quote": "living room"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-036-m1",
+            "quote": "radiator"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-036-m1",
+            "quote": "The radiator is cold."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-036-m1",
+            "quote": "The radiator is cold."
+          }
+        ]
+      },
+      "latency_ms": 0.07,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-037",
+      "output": {
+        "category": "PLUMBING",
+        "room_or_area": "bathroom",
+        "affected_item": "toilet",
+        "symptoms": [
+          "The toilet overflows."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The toilet overflows.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-037-m1",
+            "quote": "toilet"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-037-m3",
+            "quote": "bathroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-037-m1",
+            "quote": "toilet"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-037-m1",
+            "quote": "The toilet overflows."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-037-m1",
+            "quote": "The toilet overflows."
+          }
+        ]
+      },
+      "latency_ms": 0.05,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-038",
+      "output": {
+        "category": "APPLIANCE",
+        "room_or_area": "laundry room",
+        "affected_item": "washer",
+        "symptoms": [
+          "The washer shakes."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The washer shakes.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-038-m1",
+            "quote": "washer"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-038-m3",
+            "quote": "laundry room"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-038-m1",
+            "quote": "washer"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-038-m1",
+            "quote": "The washer shakes."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-038-m1",
+            "quote": "The washer shakes."
+          }
+        ]
+      },
+      "latency_ms": 0.08,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-039",
+      "output": {
+        "category": "ELECTRICAL",
+        "room_or_area": "hallway",
+        "affected_item": "light",
+        "symptoms": [
+          "The light is broken."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The light is broken.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-039-m1",
+            "quote": "light"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-039-m3",
+            "quote": "hallway"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-039-m1",
+            "quote": "light"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-039-m1",
+            "quote": "The light is broken."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-039-m1",
+            "quote": "The light is broken."
+          }
+        ]
+      },
+      "latency_ms": 0.06,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    },
+    {
+      "id": "case-040",
+      "output": {
+        "category": "HVAC",
+        "room_or_area": "bedroom",
+        "affected_item": "air conditioner",
+        "symptoms": [
+          "The air conditioner rattles."
+        ],
+        "reported_onset": null,
+        "reported_impact": null,
+        "multiple_issues_detected": false,
+        "needs_staff_attention": false,
+        "attention_reason": null,
+        "summary": "The air conditioner rattles.",
+        "missing_information": [
+          "reported_onset",
+          "reported_impact"
+        ],
+        "follow_up_questions": [],
+        "evidence": [
+          {
+            "field": "category",
+            "message_id": "case-040-m1",
+            "quote": "air conditioner"
+          },
+          {
+            "field": "room_or_area",
+            "message_id": "case-040-m3",
+            "quote": "bedroom"
+          },
+          {
+            "field": "affected_item",
+            "message_id": "case-040-m1",
+            "quote": "air conditioner"
+          },
+          {
+            "field": "symptoms",
+            "message_id": "case-040-m1",
+            "quote": "The air conditioner rattles."
+          },
+          {
+            "field": "summary",
+            "message_id": "case-040-m1",
+            "quote": "The air conditioner rattles."
+          }
+        ]
+      },
+      "latency_ms": 0.06,
+      "estimated_cost_usd": null,
+      "calls": 1,
+      "error": null,
+      "human_follow_up_score": null,
+      "human_semantic_score": null
+    }
+  ],
+  "split": "dev"
+}

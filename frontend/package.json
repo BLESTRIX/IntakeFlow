@@ -1,0 +1,43 @@
+{
+  "name": "intakeflow-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview --host 0.0.0.0",
+    "format": "prettier --write src tests *.js *.json index.html",
+    "format:check": "prettier --check src tests *.js *.json index.html",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router-dom": "7.18.4",
+    "@tanstack/react-query": "5.104.3",
+    "react-hook-form": "7.90.0",
+    "bootstrap": "5.3.8",
+    "lucide-react": "0.468.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "vitest": "4.1.11",
+    "jsdom": "27.4.0",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/user-event": "14.6.8",
+    "@playwright/test": "1.64.1",
+    "eslint": "9.39.5",
+    "@eslint/js": "9.39.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.4.26",
+    "globals": "16.5.0",
+    "prettier": "3.9.10",
+    "vite": "8.3.4"
+  }
+}

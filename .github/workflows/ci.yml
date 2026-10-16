@@ -1,0 +1,71 @@
+name: IntakeFlow checks
+on: [push, pull_request]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17.6-alpine
+        env: { POSTGRES_USER: intakeflow, POSTGRES_PASSWORD: intakeflow, POSTGRES_DB: intakeflow_test }
+        ports: ['5432:5432']
+        options: --health-cmd "pg_isready -U intakeflow" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://intakeflow:intakeflow@localhost:5432/intakeflow_test
+      AI_PROVIDER: demo
+    defaults: { run: { working-directory: backend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: { version: '0.12.10', python-version: '3.12' }
+      - run: uv sync --locked
+      - run: uv run ruff check app tests alembic
+      - run: uv run ruff format --check app tests alembic
+      - run: uv run alembic upgrade head
+      - run: uv run python -m app.cli checkpoints
+      - run: uv run pytest --cov=app --cov-report=term-missing --cov-report=xml
+      - run: uv run python -m app.ai.evaluate --provider demo --split dev
+      - uses: actions/upload-artifact@v4
+        with:
+          name: backend-coverage-and-simulated-eval
+          path: |
+            backend/coverage.xml
+            evals/results/
+  frontend:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: frontend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24.14.0', cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm test
+      - run: npm run build
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24.14.0', cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - run: cp backend/.env.example backend/.env
+      - run: docker compose up -d db redis
+      - run: docker compose run --rm backend alembic upgrade head
+      - run: docker compose run --rm backend python -m app.cli checkpoints
+      - run: docker compose run --rm backend python -m app.cli seed
+      - run: docker compose up -d --build
+      - run: npm ci
+        working-directory: frontend
+      - run: npx playwright install --with-deps chromium
+        working-directory: frontend
+      - run: npx wait-on@8.0.3 --timeout 120000 http://localhost:5173 http-get://localhost:8000/api/v1/health/ready && npm run test:e2e
+        working-directory: frontend
+      - if: always()
+        run: docker compose logs --no-color > compose.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-and-compose-results
+          path: |
+            frontend/playwright-report/
+            compose.log

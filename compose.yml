@@ -1,0 +1,73 @@
+name: intakeflow
+x-backend: &backend
+  build: ./backend
+  env_file: ./backend/.env
+  environment:
+    DATABASE_URL: postgresql+psycopg://intakeflow:intakeflow@db:5432/intakeflow
+    REDIS_URL: redis://redis:6379/0
+  depends_on:
+    db: { condition: service_healthy }
+    redis: { condition: service_healthy }
+  restart: unless-stopped
+
+services:
+  db:
+    image: postgres:17.6-alpine
+    environment:
+      POSTGRES_USER: intakeflow
+      POSTGRES_PASSWORD: intakeflow
+      POSTGRES_DB: intakeflow
+    ports: ['127.0.0.1:5432:5432']
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U intakeflow -d intakeflow']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7.4.5-alpine
+    ports: ['127.0.0.1:6379:6379']
+    command: ['redis-server', '--appendonly', 'yes']
+    volumes: [redis_data:/data]
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  backend:
+    <<: *backend
+    ports: ['127.0.0.1:8000:8000']
+    healthcheck:
+      test: ['CMD', 'python', '-c', "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/ready', timeout=4)"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+  worker:
+    <<: *backend
+    command: ['celery', '-A', 'app.tasks.worker:celery', 'worker', '--loglevel=INFO', '--concurrency=2']
+    healthcheck:
+      test: ['CMD-SHELL', 'celery -A app.tasks.worker:celery inspect ping --timeout=3 | grep -q pong']
+      interval: 30s
+      timeout: 8s
+      retries: 5
+  beat:
+    <<: *backend
+    command: ['celery', '-A', 'app.tasks.worker:celery', 'beat', '--loglevel=INFO', '--schedule=/tmp/celerybeat-schedule', '--pidfile=/tmp/celerybeat.pid']
+    healthcheck:
+      test: ['CMD-SHELL', 'test -s /tmp/celerybeat.pid && kill -0 $(cat /tmp/celerybeat.pid)']
+      interval: 30s
+      timeout: 3s
+      retries: 5
+  frontend:
+    build: { context: ./frontend, target: development }
+    environment: { API_PROXY_TARGET: 'http://backend:8000' }
+    ports: ['127.0.0.1:5173:5173']
+    depends_on: [backend]
+    healthcheck:
+      test: ['CMD', 'node', '-e', "fetch('http://localhost:5173').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+volumes:
+  postgres_data:
+  redis_data:
